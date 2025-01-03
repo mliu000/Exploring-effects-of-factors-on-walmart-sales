@@ -9,6 +9,7 @@ due: Monday, Dec 9
 
 ```{r}
 library(dplyr)
+library(ggplot2)
 ```
 
 ## Wrangling the data set
@@ -50,10 +51,12 @@ print(chosen_store)
 # We will use store 40 as our representative
 
 # The boxplot illustrates the average weekly sales for each store, as well as the variance of the sales across its weeks. We can see that store 40 is reasonable
-boxplot(data$Weekly_Sales~data$Store, main = "Side by Side boxplot of the weekly sales of all stores", xlab = "Weekly Sales", ylab = "Store Number")
 
 ggplot(data = data, aes(x = factor(Store), y = Weekly_Sales)) +
   geom_boxplot() +
+  geom_boxplot(data = subset(data, factor(Store) == "40"), 
+               aes(x = factor(Store), y = Weekly_Sales),
+               fill = "red", color = "black", width = 0.7) +
   labs(title = "Side by Side boxplot of the weekly sales of all stores", x = "Store Number", y = "Weekly Sales (USD)")
 ```
 
