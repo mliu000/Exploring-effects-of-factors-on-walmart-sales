@@ -8,7 +8,7 @@ This project was initially done as a group project for a third year stats class 
 
 The dataset we are using contains weekly sales data from 45 arbitrarily chosen storess across the United States, and was mostly recorded between the years of 2010 to 2012. It was scraped from the official website of Amazon through BeautifulSoup and WebDriver using Python. For the purposes of our analysis, we carefully chose one store as the the representative store, and used a **multiple linear regression** model with **backwards selection** to analze the relationships between weekly sales and other factors. The programming language of choide is **R**.
 
-Motivation:
+Motivation and Potential Implications:
 
 The sales of any store is very complex and can be influenced by many factors, such as the store's location, layout, and more. The goal of this project was to study the effects of various external and environmental factors, such as Fuel Price, Temperature, whether a holiday existed on the Weekly Sales Revenue of a Walmart store. From the results of our analysis, it could allow stores to potentially forecast their weekly sales (based on expected fuel price, temperature, etc), from that, more accurately import stock (so there aren't too many leftovers or have it run out too quicly), as well as hire an appropriate amount of workers.
 
